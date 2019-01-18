@@ -1,0 +1,6 @@
+.DS_Store
+node_modules/
+creds.json
+k12_attendance_report-darwin-x64/
+k12_attendance_report-win32-x64/
+k12_attendance_report-win32-x64.zip

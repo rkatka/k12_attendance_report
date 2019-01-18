@@ -1,0 +1,6 @@
+{
+  "k12CustomReportUrl": "<Your K12 Custom Reporting Link>", // https://learning.k12.com/d2l/custom/ReportingFramework/123456/SubmitHome"
+  "username": "<Your K12 username>",
+  "password": "<Your K12 Password>",
+  "semester": "<Your K12 semester reporting>"
+}
