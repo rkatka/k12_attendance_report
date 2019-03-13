@@ -11,7 +11,7 @@ const TERM_CHECKBOX = '#selectlist\\`1\\$include';
 const TERM = '#selectlist\\`1\\$value';
 const SUBMIT = '#DataExportSubmitButton';
 
-const PROD = process.env.PROD || false;
+const PROD = process.env.PROD || creds.env.PROD || false;
 console.log('Environment is PROD: ' + process.env.PROD);
 
 const app = electron.app;

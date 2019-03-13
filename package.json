@@ -6,12 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "build": "PROD=true electron-packager . k12_attendance_report",
-    "build-linux32": "PROD=true electron-packager . k12_attendance_report --platform=linux  --arch=ia32",
-    "build-linux64": "PROD=true electron-packager . k12_attendance_report --platform=linux  --arch=x64",
-    "build-mac": "PROD=true electron-packager . k12_attendance_report --platform=darwin  --arch=x64",
-    "build-win32": "PROD=true electron-packager . k12_attendance_report --platform=win32  --arch=ia32 --icon=assets/icons/win/icon.ico",
-    "build-win64": "PROD=true electron-packager . k12_attendance_report --platform=win32  --arch=x64 --icon=assets/icons/win/icon.ico"
+    "build": "electron-packager . k12_attendance_report",
+    "build-linux32": "electron-packager . k12_attendance_report --platform=linux  --arch=ia32",
+    "build-linux64": "electron-packager . k12_attendance_report --platform=linux  --arch=x64",
+    "build-mac": "electron-packager . k12_attendance_report --platform=darwin  --arch=x64",
+    "build-win32": "electron-packager . k12_attendance_report --platform=win32  --arch=ia32 --icon=assets/icons/win/icon.ico",
+    "build-win64": "electron-packager . k12_attendance_report --platform=win32  --arch=x64 --icon=assets/icons/win/icon.ico"
   },
   "keywords": [
     "k12",
