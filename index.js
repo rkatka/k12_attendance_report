@@ -11,19 +11,20 @@ const TERM_CHECKBOX = '#selectlist\\`1\\$include';
 const TERM = '#selectlist\\`1\\$value';
 const SUBMIT = '#DataExportSubmitButton';
 
-const DEV = false;
+const PROD = process.env.PROD || false;
+console.log('Environment is PROD: ' + process.env.PROD);
 
 const app = electron.app;
 app.setLoginItemSettings({
   openAtLogin: true,
-  openAsHidden: !DEV
+  openAsHidden: PROD
 });
 
 async function run() {
   const browser = await puppeteer.launch({
-    headless: !DEV,
+    headless: PROD,
     slowMo: 10,
-    devtools: DEV
+    devtools: !PROD
   });
   const page = await browser.newPage();
 
@@ -99,7 +100,7 @@ async function selectOptionByText(page, el, text) {
   );
 }
 
-if (DEV) {
+if (!PROD) {
   run();
 } else {
   // schedule to run at 23:55:00, Monday through Friday
